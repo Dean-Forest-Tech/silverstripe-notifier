@@ -1,5 +1,5 @@
-<% include ilateral\SilverStripe\Notifier\Includes\EmailHead %>
+<% include DFT\SilverStripe\Notifier\Includes\EmailHead %>
 
 $Content
 
-<% include ilateral\SilverStripe\Notifier\Includes\EmailFoot %>
+<% include DFT\SilverStripe\Notifier\Includes\EmailFoot %>
