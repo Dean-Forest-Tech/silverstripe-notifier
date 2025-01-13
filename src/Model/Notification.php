@@ -190,6 +190,14 @@ class Notification extends DataObject
                 /** @var GridField */
                 $rules_field = $fields->dataFieldByName('Rules');
 
+                /** @var GridField */
+                $types_field = $fields->dataFieldByName('Types');
+
+                $fields->removeByName([
+                    'Types',
+                    'Rules'
+                ]);
+
                 if (!empty($rules_field)) {
                     $config = $rules_field->getConfig();
                     $classes = $this->getAllowedRules();
@@ -206,9 +214,6 @@ class Notification extends DataObject
 
                     $fields->addFieldToTab('Root.Main', $rules_field);
                 }
-
-                /** @var GridField */
-                $types_field = $fields->dataFieldByName('Types');
 
                 if (!empty($types_field)) {
                     $config = $types_field->getConfig();
