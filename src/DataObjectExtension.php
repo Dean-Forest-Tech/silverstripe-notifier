@@ -1,9 +1,9 @@
 <?php
 
-namespace ilateral\SilverStripe\Notifier;
+namespace DFT\SilverStripe\Notifier;
 
-use ilateral\SilverStripe\Notifier\Model\Notification;
-use ilateral\SilverStripe\Notifier\Model\NotificationRule;
+use DFT\SilverStripe\Notifier\Model\Notification;
+use DFT\SilverStripe\Notifier\Model\NotificationRule;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\ORM\DataExtension;
 

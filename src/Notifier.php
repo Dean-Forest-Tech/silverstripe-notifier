@@ -1,13 +1,13 @@
 <?php
 
-namespace ilateral\SilverStripe\Notifier;
+namespace DFT\SilverStripe\Notifier;
 
 use SilverStripe\ORM\SS_List;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\Core\Config\Configurable;
 use SilverStripe\Core\Injector\Injectable;
-use ilateral\SilverStripe\Notifier\Model\Notification;
-use ilateral\SilverStripe\Notifier\Types\NotificationType;
+use DFT\SilverStripe\Notifier\Model\Notification;
+use DFT\SilverStripe\Notifier\Types\NotificationType;
 use SilverStripe\Core\Injector\Injector;
 
 class Notifier

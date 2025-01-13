@@ -1,12 +1,12 @@
 <?php
 
-namespace ilateral\SilverStripe\Notifier\Middleware;
+namespace DFT\SilverStripe\Notifier\Middleware;
 
 use SilverStripe\Core\Config\Config;
 use SilverStripe\Control\HTTPRequest;
-use ilateral\SilverStripe\Notifier\Notifier;
+use DFT\SilverStripe\Notifier\Notifier;
 use SilverStripe\Control\Middleware\HTTPMiddleware;
-use ilateral\SilverStripe\Notifier\DataObjectExtension;
+use DFT\SilverStripe\Notifier\DataObjectExtension;
 
 class NotificationMiddleware implements HTTPMiddleware
 {

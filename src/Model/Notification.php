@@ -1,6 +1,6 @@
 <?php
 
-namespace ilateral\SilverStripe\Notifier\Model;
+namespace DFT\SilverStripe\Notifier\Model;
 
 use SilverStripe\Core\ClassInfo;
 use SilverStripe\ORM\DataObject;
@@ -8,9 +8,9 @@ use SilverStripe\Forms\FieldList;
 use SilverStripe\ORM\HasManyList;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\Forms\GridField\GridField;
-use ilateral\SilverStripe\Notifier\Notifier;
+use DFT\SilverStripe\Notifier\Notifier;
 use SilverStripe\Forms\GridField\GridFieldAddNewButton;
-use ilateral\SilverStripe\Notifier\Types\NotificationType;
+use DFT\SilverStripe\Notifier\Types\NotificationType;
 use LogicException;
 use SilverStripe\Core\Config\Config;
 use SilverStripe\Forms\GridField\GridFieldAddExistingAutocompleter;

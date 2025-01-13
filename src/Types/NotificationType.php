@@ -1,6 +1,6 @@
 <?php
 
-namespace ilateral\SilverStripe\Notifier\Types;
+namespace DFT\SilverStripe\Notifier\Types;
 
 use LogicException;
 use SilverStripe\ORM\SS_List;
@@ -13,7 +13,7 @@ use SilverStripe\Core\Config\Config;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\ORM\ValidationResult;
 use SilverStripe\Forms\ToggleCompositeField;
-use ilateral\SilverStripe\Notifier\Model\Notification;
+use DFT\SilverStripe\Notifier\Model\Notification;
 use SilverStripe\Forms\LiteralField;
 use SilverStripe\View\HTML;
 

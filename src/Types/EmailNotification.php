@@ -1,6 +1,6 @@
 <?php
 
-namespace ilateral\SilverStripe\Notifier\Types;
+namespace DFT\SilverStripe\Notifier\Types;
 
 use SilverStripe\Control\Email\Email;
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace ilateral\SilverStripe\Notifier\Model;
+namespace DFT\SilverStripe\Notifier\Model;
 
 use SilverStripe\ORM\DataObject;
 use SilverStripe\Forms\FieldList;
-use ilateral\SilverStripe\Notifier\Model\Notification;
+use DFT\SilverStripe\Notifier\Model\Notification;
 use SilverStripe\Forms\DropdownField;
 
 /**

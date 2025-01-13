@@ -1,12 +1,11 @@
 <?php
 
-namespace ilateral\SilverStripe\Notifier;
+namespace DFT\SilverStripe\Notifier;
 
-use SilverStripe\Core\ClassInfo;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\ORM\DataExtension;
 use SilverStripe\Forms\GridField\GridField;
-use ilateral\SilverStripe\Notifier\Model\Notification;
+use DFT\SilverStripe\Notifier\Model\Notification;
 use SilverStripe\Forms\GridField\GridFieldAddNewButton;
 use Symbiote\GridFieldExtensions\GridFieldAddNewMultiClass;
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
