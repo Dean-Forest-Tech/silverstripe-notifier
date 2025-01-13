@@ -1,62 +1,62 @@
-ilateral\SilverStripe\Notifier\Model\Notification:
+DFT\SilverStripe\Notifier\Model\Notification:
   create:
-    BaseClassName: ilateral\SilverStripe\Notifier\Tests\Objects\TestCreateObject
+    BaseClassName: DFT\SilverStripe\Notifier\Tests\Objects\TestCreateObject
     StateCreated: true
   update:
-    BaseClassName: ilateral\SilverStripe\Notifier\Tests\Objects\TestUpdateObject
+    BaseClassName: DFT\SilverStripe\Notifier\Tests\Objects\TestUpdateObject
     StateUpdated: true
   updaterules_namechanged:
-    BaseClassName: ilateral\SilverStripe\Notifier\Tests\Objects\TestChangeNameObject
+    BaseClassName: DFT\SilverStripe\Notifier\Tests\Objects\TestChangeNameObject
   updaterules_statuspaid:
-    BaseClassName: ilateral\SilverStripe\Notifier\Tests\Objects\TestStatusPaidObject
+    BaseClassName: DFT\SilverStripe\Notifier\Tests\Objects\TestStatusPaidObject
   subject:
-    BaseClassName: ilateral\SilverStripe\Notifier\Tests\Objects\TestSubjectObject
+    BaseClassName: DFT\SilverStripe\Notifier\Tests\Objects\TestSubjectObject
   delete:
-    BaseClassName: ilateral\SilverStripe\Notifier\Tests\Objects\TestDeleteObject
+    BaseClassName: DFT\SilverStripe\Notifier\Tests\Objects\TestDeleteObject
     StateDeleted: true
 
-ilateral\SilverStripe\Notifier\Types\EmailNotification:
+DFT\SilverStripe\Notifier\Types\EmailNotification:
   created:
-    From: 'sender@ilateral.co.uk'
-    Recipient: 'recipient@ilateral.co.uk'
+    From: 'sender@dean-forest-tech.uk'
+    Recipient: 'recipient@dean-forest-tech.uk'
     Subject: 'Created Subject'
-    Notification: =>ilateral\SilverStripe\Notifier\Model\Notification.create
+    Notification: =>DFT\SilverStripe\Notifier\Model\Notification.create
   updated:
-    From: 'sender@ilateral.co.uk'
-    Recipient: 'recipient@ilateral.co.uk'
+    From: 'sender@dean-forest-tech.uk'
+    Recipient: 'recipient@dean-forest-tech.uk'
     Subject: 'Updated Subject'
-    Notification: =>ilateral\SilverStripe\Notifier\Model\Notification.update
+    Notification: =>DFT\SilverStripe\Notifier\Model\Notification.update
   updaterules_namechanged:
-    From: 'sender@ilateral.co.uk'
-    Recipient: 'recipient@ilateral.co.uk'
+    From: 'sender@dean-forest-tech.uk'
+    Recipient: 'recipient@dean-forest-tech.uk'
     Subject: 'Updated Name'
-    Notification: =>ilateral\SilverStripe\Notifier\Model\Notification.updaterules_namechanged
+    Notification: =>DFT\SilverStripe\Notifier\Model\Notification.updaterules_namechanged
   updaterules_statuspaid:
-    From: 'sender@ilateral.co.uk'
-    Recipient: 'recipient@ilateral.co.uk'
+    From: 'sender@dean-forest-tech.uk'
+    Recipient: 'recipient@dean-forest-tech.uk'
     Subject: 'Updated To Status Paid'
-    Notification: =>ilateral\SilverStripe\Notifier\Model\Notification.updaterules_statuspaid
+    Notification: =>DFT\SilverStripe\Notifier\Model\Notification.updaterules_statuspaid
   subject:
-    From: 'sender@ilateral.co.uk'
-    Recipient: 'recipient@ilateral.co.uk'
+    From: 'sender@dean-forest-tech.uk'
+    Recipient: 'recipient@dean-forest-tech.uk'
     Subject: 'Field Changed To {$Name}'
-    Notification: =>ilateral\SilverStripe\Notifier\Model\Notification.subject
+    Notification: =>DFT\SilverStripe\Notifier\Model\Notification.subject
   deleted:
-    From: 'sender@ilateral.co.uk'
-    Recipient: 'recipient@ilateral.co.uk'
+    From: 'sender@dean-forest-tech.uk'
+    Recipient: 'recipient@dean-forest-tech.uk'
     Subject: 'Deleted Subject'
-    Notification: =>ilateral\SilverStripe\Notifier\Model\Notification.delete
+    Notification: =>DFT\SilverStripe\Notifier\Model\Notification.delete
 
-ilateral\SilverStripe\Notifier\Model\NotificationRule:
+DFT\SilverStripe\Notifier\Model\NotificationRule:
   namechanged:
     FieldName: Name
     WasChanged: true
-    Notification: =>ilateral\SilverStripe\Notifier\Model\Notification.updaterules_namechanged
+    Notification: =>DFT\SilverStripe\Notifier\Model\Notification.updaterules_namechanged
   namechanged_two:
     FieldName: Name
     WasChanged: true
-    Notification: =>ilateral\SilverStripe\Notifier\Model\Notification.subject
+    Notification: =>DFT\SilverStripe\Notifier\Model\Notification.subject
   statuspaid:
     FieldName: Status
     Value: paid
-    Notification: =>ilateral\SilverStripe\Notifier\Model\Notification.updaterules_statuspaid
+    Notification: =>DFT\SilverStripe\Notifier\Model\Notification.updaterules_statuspaid

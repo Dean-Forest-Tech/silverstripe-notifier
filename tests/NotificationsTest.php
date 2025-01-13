@@ -1,24 +1,24 @@
 <?php
 
-namespace ilateral\SilverStripe\Notifier\Tests;
+namespace DFT\SilverStripe\Notifier\Tests;
 
 use SilverStripe\Dev\TestMailer;
 use SilverStripe\Dev\SapphireTest;
 use SilverStripe\Core\Config\Config;
 use SilverStripe\Control\Email\Mailer;
 use SilverStripe\Core\Injector\Injector;
-use ilateral\SilverStripe\Notifier\Model\Notification;
-use ilateral\SilverStripe\Notifier\DataObjectExtension;
-use ilateral\SilverStripe\Notifier\Model\NotificationRule;
-use ilateral\SilverStripe\Notifier\Tests\Objects\TestRule;
-use ilateral\SilverStripe\Notifier\Types\NotificationType;
-use ilateral\SilverStripe\Notifier\Types\EmailNotification;
-use ilateral\SilverStripe\Notifier\Tests\Objects\TestCreateObject;
-use ilateral\SilverStripe\Notifier\Tests\Objects\TestDeleteObject;
-use ilateral\SilverStripe\Notifier\Tests\Objects\TestUpdateObject;
-use ilateral\SilverStripe\Notifier\Tests\Objects\TestSubjectObject;
-use ilateral\SilverStripe\Notifier\Tests\Objects\TestChangeNameObject;
-use ilateral\SilverStripe\Notifier\Tests\Objects\TestStatusPaidObject;
+use DFT\SilverStripe\Notifier\Model\Notification;
+use DFT\SilverStripe\Notifier\DataObjectExtension;
+use DFT\SilverStripe\Notifier\Model\NotificationRule;
+use DFT\SilverStripe\Notifier\Tests\Objects\TestRule;
+use DFT\SilverStripe\Notifier\Types\NotificationType;
+use DFT\SilverStripe\Notifier\Types\EmailNotification;
+use DFT\SilverStripe\Notifier\Tests\Objects\TestCreateObject;
+use DFT\SilverStripe\Notifier\Tests\Objects\TestDeleteObject;
+use DFT\SilverStripe\Notifier\Tests\Objects\TestUpdateObject;
+use DFT\SilverStripe\Notifier\Tests\Objects\TestSubjectObject;
+use DFT\SilverStripe\Notifier\Tests\Objects\TestChangeNameObject;
+use DFT\SilverStripe\Notifier\Tests\Objects\TestStatusPaidObject;
 
 class NotificationsTest extends SapphireTest
 {
@@ -108,8 +108,8 @@ class NotificationsTest extends SapphireTest
         TestCreateObject::create()->write();
 
         $this->assertEmailSent(
-            'recipient@ilateral.co.uk',
-            'sender@ilateral.co.uk',
+            'recipient@dean-forest-tech.uk',
+            'sender@dean-forest-tech.uk',
             'Created Subject'
         );
     }
@@ -122,15 +122,15 @@ class NotificationsTest extends SapphireTest
         $object->write();
 
         // ensure no test emails were sent on creation
-        $this->assertNull($mailer->findEmail('recipient@ilateral.co.uk'));
+        $this->assertNull($mailer->findEmail('recipient@dean-forest-tech.uk'));
 
         $object->Name = "Test name";
         $object->write();
 
         // Ensure update email was sent
         $this->assertEmailSent(
-            'recipient@ilateral.co.uk',
-            'sender@ilateral.co.uk',
+            'recipient@dean-forest-tech.uk',
+            'sender@dean-forest-tech.uk',
             'Updated Subject'
         );
     }
@@ -143,15 +143,15 @@ class NotificationsTest extends SapphireTest
         $object->write();
 
         // ensure no test emails were sent on creation
-        $this->assertNull($mailer->findEmail('recipient@ilateral.co.uk'));
+        $this->assertNull($mailer->findEmail('recipient@dean-forest-tech.uk'));
 
         $object->Name = "Test name";
         $object->write();
 
         // Ensure update email was sent
         $this->assertEmailSent(
-            'recipient@ilateral.co.uk',
-            'sender@ilateral.co.uk',
+            'recipient@dean-forest-tech.uk',
+            'sender@dean-forest-tech.uk',
             'Updated Name'
         );
 
@@ -160,8 +160,8 @@ class NotificationsTest extends SapphireTest
 
         // Ensure update email was sent
         $this->assertEmailSent(
-            'recipient@ilateral.co.uk',
-            'sender@ilateral.co.uk',
+            'recipient@dean-forest-tech.uk',
+            'sender@dean-forest-tech.uk',
             'Updated Name'
         );
 
@@ -170,7 +170,7 @@ class NotificationsTest extends SapphireTest
         $object->write();
 
         // ensure no test emails were sent on change of unchecked field
-        $this->assertNull($mailer->findEmail('recipient@ilateral.co.uk'));
+        $this->assertNull($mailer->findEmail('recipient@dean-forest-tech.uk'));
     }
 
     public function testChangeFieldValueEmails()
@@ -181,21 +181,21 @@ class NotificationsTest extends SapphireTest
         $object->write();
 
         // ensure no test emails were sent on creation
-        $this->assertNull($mailer->findEmail('recipient@ilateral.co.uk'));
+        $this->assertNull($mailer->findEmail('recipient@dean-forest-tech.uk'));
 
         $object->Name = "Test name";
         $object->write();
 
         // ensure no emails were sent on invalid field change
-        $this->assertNull($mailer->findEmail('recipient@ilateral.co.uk'));
+        $this->assertNull($mailer->findEmail('recipient@dean-forest-tech.uk'));
 
         $object->Status = "paid";
         $object->write();
 
         // Ensure update email was sent
         $this->assertEmailSent(
-            'recipient@ilateral.co.uk',
-            'sender@ilateral.co.uk',
+            'recipient@dean-forest-tech.uk',
+            'sender@dean-forest-tech.uk',
             'Updated To Status Paid'
         );
 
@@ -204,7 +204,7 @@ class NotificationsTest extends SapphireTest
         $object->write();
 
         // ensure no emails were sent on invalid status change
-        $this->assertNull($mailer->findEmail('recipient@ilateral.co.uk'));
+        $this->assertNull($mailer->findEmail('recipient@dean-forest-tech.uk'));
     }
 
     public function testDeletedEmails()
@@ -215,20 +215,20 @@ class NotificationsTest extends SapphireTest
         $object->write();
 
         // ensure no test emails were sent on creation
-        $this->assertNull($mailer->findEmail('recipient@ilateral.co.uk'));
+        $this->assertNull($mailer->findEmail('recipient@dean-forest-tech.uk'));
 
         $object->Name = "Test name";
         $object->write();
 
         // ensure no test emails were sent on update
-        $this->assertNull($mailer->findEmail('recipient@ilateral.co.uk'));
+        $this->assertNull($mailer->findEmail('recipient@dean-forest-tech.uk'));
 
         $object->delete();
 
         // Ensure update email was sent
         $this->assertEmailSent(
-            'recipient@ilateral.co.uk',
-            'sender@ilateral.co.uk',
+            'recipient@dean-forest-tech.uk',
+            'sender@dean-forest-tech.uk',
             'Deleted Subject'
         );
     }
@@ -243,8 +243,8 @@ class NotificationsTest extends SapphireTest
 
         // Ensure update email was sent
         $this->assertEmailSent(
-            'recipient@ilateral.co.uk',
-            'sender@ilateral.co.uk',
+            'recipient@dean-forest-tech.uk',
+            'sender@dean-forest-tech.uk',
             'Field Changed To Test name'
         );
     }

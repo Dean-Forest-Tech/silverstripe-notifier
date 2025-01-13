@@ -1,8 +1,8 @@
 <?php
 
-namespace ilateral\SilverStripe\Notifier\Tests\Objects;
+namespace DFT\SilverStripe\Notifier\Tests\Objects;
 
-use ilateral\SilverStripe\Notifier\DataObjectExtension;
+use DFT\SilverStripe\Notifier\DataObjectExtension;
 use SilverStripe\Dev\TestOnly;
 use SilverStripe\ORM\DataObject;
 
