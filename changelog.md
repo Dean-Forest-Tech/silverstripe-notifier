@@ -29,3 +29,9 @@ Add ability to add custom variables to notification type rendering
 * Clean up email send layout a little
 * Add missing cascade deletes
 * Allow passing custom data to the email send method
+
+## 2.0.0
+
+* Switch to DFT
+* Add SS5 support
+

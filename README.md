@@ -9,7 +9,7 @@ changes that can be managed via the admin.
 
 Install this module via composer:
 
-    composer require i-lateral/silverstripe-notifier
+    composer require dft/silverstripe-notifier
 
 Once installed run `dev/build` to add additional database tables
 
@@ -23,7 +23,7 @@ via fairly simple config:
     Name: notificationsconfig
     ---
     # allow configuring of notifications to users and a custom page type
-    ilateral\SilverStripe\Notifier\Notifier:
+    DFT\SilverStripe\Notifier\Notifier:
       registered_objects:
         - SilverStripe\Security\Member
         - App\Model\MyCustomPage
@@ -70,9 +70,9 @@ allow. This can be set in YML as follows:
     Name: notificationsconfig
     ---
     # Disallow basic notification rule
-    ilateral\SilverStripe\Notifier\Model\Notification:
+    DFT\SilverStripe\Notifier\Model\Notification:
       disallow_rules:
-        - ilateral\SilverStripe\Notifier\Model\Notification\NotificationRule
+        - DFT\SilverStripe\Notifier\Model\Notification\NotificationRule
 
 ### Adding Notification Types
 
@@ -97,9 +97,9 @@ allow. This can be set in YML as follows:
     Name: notificationsconfig
     ---
     # Disallow email notification type
-    ilateral\SilverStripe\Notifier\Model\Notification:
+    DFT\SilverStripe\Notifier\Model\Notification:
       disallow_types:
-        - ilateral\SilverStripe\Notifier\Types\EmailNotification
+        - DFT\SilverStripe\Notifier\Types\EmailNotification
 
 ### Content Rendering
 
@@ -134,7 +134,7 @@ class MyMonitoredObject extends DataObject
   ];
 
   private static $extensions = [
-    'ilateral\SilverStripe\Notifier'
+    'DFT\SilverStripe\Notifier'
   ];
 }
 ```
@@ -142,7 +142,7 @@ class MyMonitoredObject extends DataObject
 You can add custom config:
 
 ```yml
-ilateral\SilverStripe\Notifier\Types\NotificationType:
+DFT\SilverStripe\Notifier\Types\NotificationType:
   alt_from_fields:
     MyMonitoredObject:
       - Sender

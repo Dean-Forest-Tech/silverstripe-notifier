@@ -6,8 +6,8 @@ any feedback that usera may have.
 If you encounter any issues, have any ideas or want to request a feature, please
 use the following links:
 
- * [Sharing your opinion and raising issues](https://github.com/i-lateral/silverstripe-notifier/issues)
- * [Submit a pull request](https://github.com/silvercommerce/i-lateral/silverstripe-notifier/pulls)
+ * [Sharing your opinion and raising issues](https://github.com/Dean-Forest-Tech/silverstripe-notifier/issues)
+ * [Submit a pull request](https://github.com/silvercommerce/Dean-Forest-Tech/silverstripe-notifier/pulls)
 
 ## Translations
 
