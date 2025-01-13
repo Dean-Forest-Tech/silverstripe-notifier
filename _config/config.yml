@@ -3,4 +3,4 @@ Name: notifierconfig
 ---
 SilverStripe\SiteConfig\SiteConfig:
   extensions:
-    - ilateral\SilverStripe\Notifier\SiteConfigExtension
+    - DFT\SilverStripe\Notifier\SiteConfigExtension

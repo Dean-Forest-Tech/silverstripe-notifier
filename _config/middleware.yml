@@ -7,4 +7,4 @@ SilverStripe\Core\Injector\Injector:
   SilverStripe\Control\Director:
     properties:
       Middlewares:
-        NotificationMiddleware: '%$ilateral\SilverStripe\Notifier\Middleware\NotificationMiddleware'
+        NotificationMiddleware: '%$DFT\SilverStripe\Notifier\Middleware\NotificationMiddleware'
